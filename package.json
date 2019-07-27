@@ -20,7 +20,7 @@
     "discord.js": "^11.5.1",
     "discord.js-commando": "^0.10.0",
     "emoji-random": "^0.1.2",
-    "ffmpeg-static": "^2.4.0",
+    "ffmpeg-static": "^2.5.0",
     "node-fetch": "^2.6.0",
     "opusscript": "0.0.6",
     "rimraf": "^2.6.3",
