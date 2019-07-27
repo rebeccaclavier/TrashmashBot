@@ -5,7 +5,7 @@ import chalk from 'chalk';
 import { GameClient } from './models';
 
 const client = new GameClient({
-    commandPrefix: '!',
+    commandPrefix: '>',
     owner: '131859790593785856',
     unknownCommandResponse: false,
 });
