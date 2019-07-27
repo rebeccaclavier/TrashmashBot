@@ -1,0 +1,34 @@
+{
+  "name": "trashmash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc",
+    "watch:build": "tsc --watch",
+    "watch:server": "nodemon './dist/bot.js' --watch './dist'",
+    "start": "npm-run-all clean build --parallel watch:build watch:server --print-label",
+    "start-prod": "node ./dist/bot.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "chokidar": "^3.0.2",
+    "discord.js": "^11.5.1",
+    "discord.js-commando": "^0.10.0",
+    "emoji-random": "^0.1.2",
+    "ffmpeg-static": "^2.4.0",
+    "node-fetch": "^2.6.0",
+    "opusscript": "0.0.6",
+    "rimraf": "^2.6.3",
+    "temp-dir": "^2.0.0",
+    "ytdl-core": "^0.29.3"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.3.7",
+    "@types/rimraf": "^2.0.2",
+    "npm-run-all": "^4.1.5"
+  }
+}
