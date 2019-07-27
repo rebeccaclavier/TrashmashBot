@@ -1,6 +1,5 @@
 import path from 'path';
-import { mkdirSync } from 'fs';
-import rimraf from 'rimraf';
+import { existsSync } from 'fs';
 import chalk from 'chalk';
 
 import { GameClient } from './models';
@@ -24,9 +23,12 @@ client.once('ready', () => {
     console.log(chalk.green('[Global]') + ` Logged in as ${client.user.tag}! (${client.user.id})`);
     client.user.setActivity('high quality mashes');
 
-    rimraf.sync(client.dir);
-    mkdirSync(client.dir);
-    console.log(chalk.green('[Global]') + ' Created trashmash folder');
+    if (existsSync(client.dir)) {
+        console.log(chalk.green('[Global]') + ' Trashmash folder found');
+    } else {
+        console.log(chalk.red('[Global] Trashmash folder not found, exiting'));
+        process.exit(1);
+    }
 });
 
 client.on('error', console.error);
