@@ -21,7 +21,7 @@
     "discord.js-commando": "^0.10.0",
     "emoji-random": "^0.1.2",
     "ffmpeg-static": "^2.5.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "opusscript": "0.0.6",
     "rimraf": "^2.6.3",
     "temp-dir": "^2.0.0",
